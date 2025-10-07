@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-
+/* Global Variables */
 :root{
     --line-border-fill: #58c158;
     --line-border-empty: #75b416;
@@ -10,6 +10,7 @@
     box-sizing: border-box;
 }
 
+/* Basic Reset */
 body {
     background-color: #008000;
     font-family: 'Muli', sans-serif;
@@ -25,6 +26,21 @@ body {
     text-align: center; 
 }
 
+/* Title styling */
+.title {
+    position: relative; 
+    top: 0;
+    text-align: center;
+    justify-content: space-between;
+    color: white;
+    padding: 6px 12px;
+    background: #00000026;
+    border-radius: 6px;
+    margin-top: 12px;
+    margin-bottom: 28px;
+}
+
+/* Progress Bar Container */
 .progress-container {
     display: flex;
     justify-content: space-between;
@@ -34,6 +50,7 @@ body {
     width: 350px;
 }
 
+/* Progress Bar */
 .progress::before {
     content: '';
     background-color: var(--line-border-empty);
@@ -46,6 +63,7 @@ body {
     z-index: -1;
 }
 
+/* Progress Bar Fill */
 .progress {
     background-color: var(--line-border-fill);
     position: absolute;
@@ -58,6 +76,7 @@ body {
     transition: .4s ease;
 }
 
+/* Each circle */
 .circle {
     background-color: lightblue;
     color: #999;
@@ -72,10 +91,12 @@ body {
     z-index: 2;
 }
 
+/* Active circle */
 .circle.active {
     border-color: var(--line-border-fill);
 }
 
+/* Button styling */
 .btn {
     background: var(--line-border-fill);
     color: white;
@@ -88,15 +109,28 @@ body {
     font-size: 14px;
 }
 
+/* Button hover and active states */
 .btn:active {
     transform: scale(0.98);
 }
 
+/* Remove outline on focus */
 .btn:focus {
     outline: 0;
 }
 
+/* Disabled button state */
 .btn:disabled {
     background : var(--line-border-empty);
     cursor: not-allowed;
+}
+
+/* Credit styling */
+.credit {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
 }
